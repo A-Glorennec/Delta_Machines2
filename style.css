@@ -8,7 +8,7 @@ body, html {
 }
 
 header, section {
-    height: 100vh; 
+    height: calc(100vh - 140px); 
     display: flex;
 }
 
@@ -56,8 +56,8 @@ header, section {
 .background2 {
     background-image: url('assets/green-car.png');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     color: white;
@@ -72,9 +72,13 @@ header, section {
 }
 
 .presentation-container {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 150px;
+    padding-right: 150px;
     font-size: x-large;
+}
+
+.presentation-container p {
+    padding-bottom: 30px;
 }
 
 .presentation {
@@ -90,7 +94,7 @@ header, section {
 .icons-presentation {
     display: flex;
     gap: 50px;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .background3 {
