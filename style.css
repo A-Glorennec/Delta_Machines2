@@ -1,0 +1,140 @@
+/* Reset CSS */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header, section {
+    height: 100vh; 
+    display: flex;
+}
+
+.background1 {
+    background-image: url('assets/white_car.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    height: 30rem;
+    width: 40rem;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+
+.box span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.box span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+.background2 {
+    background-image: url('assets/green-car.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+}
+
+.center {
+    font-size: 5rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.presentation-container {
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: x-large;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.presentation img {
+    height: 35px;
+}
+
+.icons-presentation {
+    display: flex;
+    gap: 50px;
+    padding-top: 10px;
+}
+
+.background3 {
+    background-image: url('assets/another-image.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer {
+    background-color: black;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-logo {
+    height: 5rem;
+}
+
+.footer-logo2 {
+    height: 6rem;
+}
+
+.icons {
+    display: flex;
+    gap: 20px; 
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
