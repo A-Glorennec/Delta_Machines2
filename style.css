@@ -12,6 +12,7 @@ header, section {
     display: flex;
 }
 
+
 .background1 {
     background-image: url('assets/white_car.png');
     background-size: cover;
@@ -72,8 +73,8 @@ header, section {
 }
 
 .presentation-container {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 9rem;
+    padding-right: 9rem;
     font-size: x-large;
 }
 
@@ -98,14 +99,59 @@ header, section {
 }
 
 .background3 {
-    background-image: url('assets/another-image.png'); 
+    background-image: url('assets/rejoindre.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.team {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: x-large;
+    margin-top: 60px;
+}
+
+.team h2 {
+    margin-top: 10px;
+}
+
+.team h2 span {
+    font-weight: lighter;
+}
+
+
+.slider {
+    color: aliceblue;
+    width: 50%;
+}
+
+.slider-labels {
+    display: flex;
+    gap: 2.4rem;
+    width: 50%;
+    margin: 0 auto;
+    color: aliceblue;
+    font-size: large;
+    padding-top: 10px;
+}
+
+output {
+    font-size: large;
+    color: aliceblue;
+    margin-top: 10px;
+}
+
+.team p {
+    width: 75%;
 }
 
 footer {
-    background-color: black;
+     background-color: rgba(0, 0, 0, 1);
     height: 140px;
     display: flex;
     justify-content: space-between;
