@@ -1,9 +1,19 @@
+@font-face {
+    font-family: 'Eurostile';
+    src: url('fonts/Eurostile.woff2') format('woff2'),
+         url('fonts/Eurostile.woff') format('woff'),
+         url('fonts/Eurostile.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Eurostile', sans-serif;
 }
 
 header, section {
@@ -77,6 +87,7 @@ header, section {
 
 .presentation-container p {
     padding-bottom: 30px;
+    font-size: 1.8rem;
 }
 
 .presentation {
@@ -111,6 +122,10 @@ header, section {
     width: 100%;
     font-size: x-large;
     margin-top: 60px;
+}
+
+.team p {
+    font-size: 1.8rem;
 }
 
 .team h2 {
