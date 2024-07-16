@@ -106,6 +106,10 @@ header, section {
     padding-top: 20px;
 }
 
+a:hover{
+    transform: scale(1.5);
+}
+
 .background3 {
     background-image: url('assets/rejoindre.png'); 
     background-size: cover;
@@ -207,6 +211,20 @@ footer {
     animation: myAnim 1.2s forwards;
 }
 
+@keyframes animate{
+	
+	0%{
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px, -20px);
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: rotate(45deg) translate(20px, 20px);
+	}
+}
 /* animation "bienvenue" */
 @keyframes myAnim {
     0% {
