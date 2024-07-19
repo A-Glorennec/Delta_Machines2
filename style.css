@@ -152,7 +152,7 @@ a:hover {
 
 .slider {
     -webkit-appearance: none;
-    width: 95%;
+    width: 100%;
     height: 10px;
     background: #007bff;
     outline: none;
@@ -270,6 +270,172 @@ footer {
 .h1-anim.visible {
     animation: myAnim 1.2s forwards;
 }
+
+
+@media (max-width: 768px) {
+    header,
+    section {
+        height: auto;
+    }
+
+    .logo {
+        height: 35rem;
+        width: 32rem;
+    }
+
+    .presentation-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .center {
+        font-size: 3rem;
+    }
+
+    .presentation-container p {
+        font-size: 1.2rem;
+    }
+
+    .presentation img {
+        height: 30px;
+    }
+
+    .icons-presentation {
+        gap: 30px;
+    }
+
+    .team {
+        font-size: medium;
+    }
+
+    .team p {
+        font-size: 1.2rem;
+        width: 85%;
+    }
+
+    .slider-labels span {
+        font-size: 14px;
+    }
+
+    .footer-logo {
+        height: 3rem;
+    }
+
+    .footer-logo2 {
+        height: 6rem;
+        width: 5rem;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .icons {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 20rem;
+        width: 17rem;
+    }
+
+    .box {
+        display: none;
+    }
+
+    .background2 {
+        background-image: url('assets/green-car-mobile.png');
+        height: min-content;
+    }
+
+    .presentation-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .center {
+        font-size: 2rem;
+    }
+
+    .presentation {
+        display: flex;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+    
+
+    .presentation-container p {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+    }
+
+    .presentation img {
+        height: 25px;
+    }
+
+    .social {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .icons-presentation {
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        padding-top: 5px;
+    }
+    
+    .background3 {
+        background-image: url('assets/rejoindre22.png');
+        height: min-content;
+        padding-bottom: 15rem;
+    }
+    .team {
+        font-size: small;
+        height:min-content;
+    }
+
+    .team p {
+        font-size: 1.1rem;
+        width: 90%;
+    }
+
+    .slider-labels span {
+        font-size: 12px;
+    }
+
+    .footer-logo {
+        height: 2rem;
+    }
+
+    .footer-logo2 {
+        height: 4rem;
+        width: 3rem;
+    }
+
+    footer {
+        flex-direction: row;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .icons {
+        gap: 10px;
+
+    }
+
+}
+
+
 
 @keyframes animate {
 
