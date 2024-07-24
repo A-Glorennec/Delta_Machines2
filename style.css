@@ -142,80 +142,39 @@ a:hover {
     font-weight: lighter;
 }
 
-
+input[type="range"] {
+    width: 100%;
+    margin: 20px 0;
+}
 
 .slider-container {
-    width: 80%;
-    max-width: 600px;
-    position: relative;
+    width: 90%;
+    margin: 20px 0;
 }
 
-.slider {
-    -webkit-appearance: none;
+.slider-labels, .ticks {
+    position: relative;
     width: 100%;
-    height: 10px;
-    background: #007bff;
-    outline: none;
-    opacity: 0.9;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    border-radius: 5px;
-    position: relative;
-    margin-left: -4px;
-    padding-right: 8px;
 }
 
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    cursor: pointer;
-    border: 2px solid #007bff;
-    border-radius: 50%;
-    position: relative;
-    z-index: 2;
-}
-
-.slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    cursor: pointer;
-    border: 2px solid #007bff;
-    border-radius: 50%;
-    position: relative;
-    z-index: 2;
-}
-
-.ticks {
-    display: flex;
-    justify-content: space-between;
+.slider-labels span, .ticks span {
     position: absolute;
-    top: 12px;
-    width: 95%;
-    pointer-events: none;
+    transform: translateX(-50%);
 }
+
+.slider-labels span:nth-child(1), .ticks span:nth-child(1) { left: 0%; }
+.slider-labels span:nth-child(2), .ticks span:nth-child(2) { left: 10.2%; }
+.slider-labels span:nth-child(3), .ticks span:nth-child(3) { left: 19.2%; }
+.slider-labels span:nth-child(4), .ticks span:nth-child(4) { left: 43.6%; }
+.slider-labels span:nth-child(5), .ticks span:nth-child(5) { left: 72.57%; }
+.slider-labels span:nth-child(6), .ticks span:nth-child(6) { left: 90%; }
 
 .ticks span {
     display: block;
     width: 1px;
     height: 10px;
-    background: white;
-
-}
-
-.slider-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.slider-labels span {
-    font-size: 18px;
-    color: white;
-    position: relative;
+    background: black;
+  top: -30px;
 }
 
 
@@ -430,7 +389,6 @@ footer {
 
     .icons {
         gap: 10px;
-
     }
 
 }
