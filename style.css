@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Eurostile';
     src: url('fonts/Eurostile.woff2') format('woff2'),
-         url('fonts/Eurostile.woff') format('woff'),
-         url('fonts/Eurostile.ttf') format('truetype');
+        url('fonts/Eurostile.woff') format('woff'),
+        url('fonts/Eurostile.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -242,6 +242,7 @@ footer {
 }
 
 @media (min-width: 1024px) {
+
     .icons-presentation a i,
     .team a i.fa-discord {
         font-size: 3.5rem;
@@ -278,8 +279,9 @@ footer {
     .icons-presentation {
         gap: 40px;
     }
-        .icons-presentation a i {
-        font-size: 3rem; 
+
+    .icons-presentation a i {
+        font-size: 3rem;
     }
 
     .team {
@@ -318,6 +320,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
     header,
     section {
         height: auto;
@@ -404,6 +407,7 @@ footer {
     html {
         width: 100%;
     }
+
     .logo {
         height: 20rem;
         width: 17rem;
@@ -500,6 +504,7 @@ footer {
         gap: 10px;
     }
 }
+
 @media (min-width: 1600px) {
     .team {
         font-size: 1.8rem;
@@ -530,23 +535,25 @@ footer {
     }
 
     .background3 {
-        padding-bottom: 140px; /* Augmente l'espace pour le pied de page */
-    }
+        padding-bottom: 140px;
 
-    .team a i.fa-discord {
-        font-size: 4rem;
-        padding-top: 20px;
-    }
+        .team a i.fa-discord {
+            font-size: 4rem;
+            padding-top: 20px;
+        }
 
-    .team a:hover i.fa-discord {
-        transform: scale(1.5); 
-        transition: transform 0.3s ease;
+        .team a:hover i.fa-discord {
+            transform: scale(1.5);
+            transition: transform 0.3s ease;
+        }
     }
 }
+
 @media (min-width: 481px) and (max-width: 768px) {
     .box {
         display: none;
     }
+
 }
 
 
@@ -555,9 +562,11 @@ footer {
         opacity: 0;
         transform: rotate(45deg) translate(-20px, -20px);
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
@@ -570,31 +579,38 @@ footer {
         opacity: 0;
         transform: translateX(-250px);
     }
+
     38% {
         animation-timing-function: ease-out;
         opacity: 1;
         transform: translateX(0);
     }
+
     55% {
         animation-timing-function: ease-in;
         transform: translateX(-68px);
     }
+
     72% {
         animation-timing-function: ease-out;
         transform: translateX(0);
     }
+
     81% {
         animation-timing-function: ease-in;
         transform: translateX(-28px);
     }
+
     90% {
         animation-timing-function: ease-out;
         transform: translateX(0);
     }
+
     95% {
         animation-timing-function: ease-in;
         transform: translateX(-8px);
     }
+
     100% {
         animation-timing-function: ease-out;
         transform: translateX(0);
