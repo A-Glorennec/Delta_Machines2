@@ -1,12 +1,11 @@
 @font-face {
     font-family: 'Eurostile';
     src: url('fonts/Eurostile.woff2') format('woff2'),
-        url('fonts/Eurostile.woff') format('woff'),
-        url('fonts/Eurostile.ttf') format('truetype');
+         url('fonts/Eurostile.woff') format('woff'),
+         url('fonts/Eurostile.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
 
 body,
 html {
@@ -15,32 +14,42 @@ html {
     box-sizing: border-box;
     height: 100%;
     font-family: 'Eurostile', sans-serif;
+    overflow-x: hidden;
 }
 
 header,
 section {
     height: calc(100vh - 140px);
     display: flex;
+    position: relative;
 }
 
 .background1 {
-    background-image: url('assets/white_car.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('assets/white_car.png') center/cover no-repeat;
+}
+
+.background2 {
+    background: url('assets/green-car.png') center/cover no-repeat;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.background3 {
+    background: url('assets/rejoindre.png') center/cover no-repeat;
+    height: 100vh;
 }
 
 .logo {
     height: 45rem;
     width: 42rem;
-    margin-top: -50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: -50px auto 0;
 }
 
 .box {
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -64,16 +73,6 @@ section {
     animation-delay: -0.4s;
 }
 
-.background2 {
-    background-image: url('assets/green-car.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: calc(100vh - 100px);
-    display: flex;
-    flex-direction: column;
-    color: white;
-}
-
 .center {
     font-size: 5rem;
     display: flex;
@@ -82,8 +81,7 @@ section {
 }
 
 .presentation-container {
-    padding-left: 9rem;
-    padding-right: 9rem;
+    padding: 0 9rem;
     font-size: x-large;
 }
 
@@ -99,7 +97,7 @@ section {
 }
 
 .presentation img {
-    height: 35px;
+    height: 45px;
 }
 
 .icons-presentation {
@@ -110,14 +108,6 @@ section {
 
 a:hover {
     transform: scale(1.5);
-}
-
-.background3 {
-    background-image: url('assets/rejoindre.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
 }
 
 .team {
@@ -132,6 +122,7 @@ a:hover {
 
 .team p {
     font-size: 1.6rem;
+    width: 75%;
 }
 
 .team h2 {
@@ -152,34 +143,54 @@ input[type="range"] {
     margin: 20px 0;
 }
 
-.slider-labels, .ticks {
+.slider-labels,
+.ticks {
     position: relative;
     width: 100%;
 }
 
-.slider-labels span, .ticks span {
+.slider-labels span,
+.ticks span {
     position: absolute;
     transform: translateX(-50%);
 }
 
-.slider-labels span:nth-child(1), .ticks span:nth-child(1) { left: 0%; }
-.slider-labels span:nth-child(2), .ticks span:nth-child(2) { left: 10.2%; }
-.slider-labels span:nth-child(3), .ticks span:nth-child(3) { left: 19.2%; }
-.slider-labels span:nth-child(4), .ticks span:nth-child(4) { left: 43.6%; }
-.slider-labels span:nth-child(5), .ticks span:nth-child(5) { left: 72.57%; }
-.slider-labels span:nth-child(6), .ticks span:nth-child(6) { left: 90%; }
+.slider-labels span:nth-child(1),
+.ticks span:nth-child(1) {
+    left: 0%;
+}
+
+.slider-labels span:nth-child(2),
+.ticks span:nth-child(2) {
+    left: 10.2%;
+}
+
+.slider-labels span:nth-child(3),
+.ticks span:nth-child(3) {
+    left: 19.2%;
+}
+
+.slider-labels span:nth-child(4),
+.ticks span:nth-child(4) {
+    left: 43.6%;
+}
+
+.slider-labels span:nth-child(5),
+.ticks span:nth-child(5) {
+    left: 72.57%;
+}
+
+.slider-labels span:nth-child(6),
+.ticks span:nth-child(6) {
+    left: 90%;
+}
 
 .ticks span {
     display: block;
     width: 1px;
     height: 10px;
     background: black;
-  top: -30px;
-}
-
-
-.team p {
-    width: 75%;
+    top: -30px;
 }
 
 footer {
@@ -230,11 +241,103 @@ footer {
     animation: myAnim 1.2s forwards;
 }
 
+@media (min-width: 1024px) {
+    .icons-presentation a i,
+    .team a i.fa-discord {
+        font-size: 3.5rem;
+    }
+
+    a:hover {
+        transform: scale(1.7);
+        transition: transform 0.3s ease;
+    }
+
+    .team a i.fa-discord {
+        padding-top: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1623px) {
+    .logo {
+        height: 40rem;
+        width: 37rem;
+    }
+
+    .presentation-container {
+        padding: 0 5rem;
+    }
+
+    .center {
+        font-size: 4rem;
+    }
+
+    .presentation img {
+        height: 40px;
+    }
+
+    .icons-presentation {
+        gap: 40px;
+    }
+        .icons-presentation a i {
+        font-size: 3rem; 
+    }
+
+    .team {
+        font-size: large;
+        padding-bottom: 150px;
+    }
+
+    .team p {
+        font-size: 1.4rem;
+        width: 80%;
+    }
+
+    .slider-labels span {
+        font-size: 16px;
+    }
+
+    .footer-logo {
+        height: 4rem;
+    }
+
+    .footer-logo2 {
+        height: 8rem;
+        width: 7rem;
+    }
+
+    footer {
+        flex-direction: row;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .icons {
+        gap: 15px;
+    }
+}
 
 @media (max-width: 768px) {
     header,
     section {
         height: auto;
+    }
+
+    .background1,
+    .background2,
+    .background3 {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .background2 {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .background3 {
+        height: auto;
+        padding-bottom: 100px;
     }
 
     .logo {
@@ -243,8 +346,7 @@ footer {
     }
 
     .presentation-container {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding: 0 2rem;
     }
 
     .center {
@@ -265,6 +367,7 @@ footer {
 
     .team {
         font-size: medium;
+        padding-bottom: 150px;
     }
 
     .team p {
@@ -286,7 +389,7 @@ footer {
     }
 
     footer {
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
         padding: 10px;
         gap: 10px;
@@ -298,6 +401,9 @@ footer {
 }
 
 @media (max-width: 480px) {
+    html {
+        width: 100%;
+    }
     .logo {
         height: 20rem;
         width: 17rem;
@@ -307,14 +413,23 @@ footer {
         display: none;
     }
 
+    .background1 {
+        background-image: url('assets/white_car.png');
+    }
+
     .background2 {
         background-image: url('assets/green-car-mobile.png');
         height: min-content;
     }
 
+    .background3 {
+        background-image: url('assets/rejoindre22.png');
+        height: min-content;
+        padding-bottom: 10rem;
+    }
+
     .presentation-container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 0 1rem;
     }
 
     .center {
@@ -326,7 +441,6 @@ footer {
         justify-content: center;
         font-size: 0.8rem;
     }
-    
 
     .presentation-container p {
         font-size: 1.1rem;
@@ -348,18 +462,13 @@ footer {
         gap: 20px;
         display: flex;
         justify-content: center;
-        padding-bottom: 20px;
-        padding-top: 5px;
+        padding: 5px 0 20px;
     }
-    
-    .background3 {
-        background-image: url('assets/rejoindre22.png');
-        height: min-content;
-        padding-bottom: 15rem;
-    }
+
     .team {
         font-size: small;
-        height:min-content;
+        height: min-content;
+        padding-bottom: 0;
     }
 
     .team p {
@@ -390,67 +499,102 @@ footer {
     .icons {
         gap: 10px;
     }
+}
+@media (min-width: 1600px) {
+    .team {
+        font-size: 1.8rem;
+        padding-bottom: 60px;
+    }
 
+    .team h2 {
+        font-size: 2.5rem;
+    }
+
+    .team p {
+        font-size: 1.4rem;
+        width: 70%;
+    }
+
+    .footer-logo2 {
+        height: 8rem;
+        width: 7rem;
+    }
+
+    .icons {
+        gap: 30px;
+    }
+
+    footer {
+        height: 120px;
+        padding: 0 50px;
+    }
+
+    .background3 {
+        padding-bottom: 140px; /* Augmente l'espace pour le pied de page */
+    }
+
+    .team a i.fa-discord {
+        font-size: 4rem;
+        padding-top: 20px;
+    }
+
+    .team a:hover i.fa-discord {
+        transform: scale(1.5); 
+        transition: transform 0.3s ease;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .box {
+        display: none;
+    }
 }
 
 
-
 @keyframes animate {
-
     0% {
         opacity: 0;
         transform: rotate(45deg) translate(-20px, -20px);
     }
-
     50% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
     }
 }
 
-/* animation "bienvenue" */
 @keyframes myAnim {
     0% {
         animation-timing-function: ease-in;
         opacity: 0;
         transform: translateX(-250px);
     }
-
     38% {
         animation-timing-function: ease-out;
         opacity: 1;
         transform: translateX(0);
     }
-
     55% {
         animation-timing-function: ease-in;
         transform: translateX(-68px);
     }
-
     72% {
         animation-timing-function: ease-out;
         transform: translateX(0);
     }
-
     81% {
         animation-timing-function: ease-in;
         transform: translateX(-28px);
     }
-
     90% {
         animation-timing-function: ease-out;
         transform: translateX(0);
     }
-
     95% {
         animation-timing-function: ease-in;
         transform: translateX(-8px);
     }
-
     100% {
         animation-timing-function: ease-out;
         transform: translateX(0);
